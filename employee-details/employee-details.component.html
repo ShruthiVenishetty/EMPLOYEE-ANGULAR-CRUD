@@ -1,0 +1,34 @@
+<!-- <div class="jumbotron py-3">
+  <h1 class="display-4 text-center">Employee Details Form</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <app-employee-detail-form></app-employee-detail-form>
+  </div>
+  <div class="col-md-6">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Employee Name</th>
+                <th>Department Name</th>
+                <th>Experience</th>
+                <th>Employee id</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pd of service.list">
+
+                <td (click)="populateForm(pd)">{{pd.empName}}</td>
+                <td (click)="populateForm(pd)">{{pd.deptName}}</td>
+                <td (click)="populateForm(pd)">{{pd.experience}}</td>
+                <td (click)="populateForm(pd)">{{pd.empId}}</td>
+                <td>
+                    <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.empId)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div> -->

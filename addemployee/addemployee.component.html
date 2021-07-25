@@ -1,0 +1,39 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+  <input type="hidden" name="employeeId" #employeeId="ngModel" [(ngModel)]="service.formData.employeeId">
+  <div class="form-group">
+  <label>Employee Name</label>
+  <input type="text" class="form-control form-control-lg" placeholder="Employeee Name" name="employeeName"
+  #employeeName="ngModel" [(ngModel)]="service.formData.employeeName" required [class.invalid]="employeeName.invalid && employeeName.touched">
+  </div>
+  <div class="form-group">
+    <label>Employee Salary</label>
+    <input type="number" class="form-control form-control-lg" placeholder="Employeee Salary" name="salary"
+    #salary="ngModel" [(ngModel)]="service.formData.salary" required [class.invalid]="salary.invalid && salary.touched">
+  </div>
+  <div class="form-group">
+      <label>Department Name</label>
+      <input type="text" class="form-control form-control-lg" placeholder="Department Name" name="departmentName"
+      #departmentName="ngModel" [(ngModel)]="service.formData.departmentName" required [class.invalid]="departmentName.invalid && departmentName.touched">
+  </div>
+  <div class="form-group">
+    <label>Date Of Join</label>
+    <input type="datetime-local" class="form-control form-control-lg" placeholder="dd-mm-yyyy" name="dateOfJoining"
+        #dateOfJoining="ngModel" [(ngModel)]="service.formData.dateOfJoining" required [class.invalid]="dateOfJoining.invalid && dateOfJoining.touched">
+  </div>
+  <div class="form-group">
+    <label>Employee Type</label>
+    <select type="number" class="form-control form-control-lg" name="empType" title="All continents"
+    #empType="ngModel" [(ngModel)]="service.formData.empType" required>
+
+      <option  selected disabled >Select a option</option>
+      <option>Trainer</option>
+      <option>Developer</option>
+      <option>Tester</option>
+      <option>Manager</option>
+      </select>
+
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid" >SUBMIT</button>
+</div>
+</form>
